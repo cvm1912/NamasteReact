@@ -1,5 +1,6 @@
 import React from 'react'
 import Header from './components/Header'
+import Body from './components/Body'
 
 /**
  *  Header
@@ -9,13 +10,18 @@ import Header from './components/Header'
  * Body
  * - Search
  * - Restaurant Container
+ *   - res-card
+ * 
  * 
  */
+
+
 
 const App = () => {
   return (
     <div>
        <Header/>
+       <Body/>
     </div>
   )
 }

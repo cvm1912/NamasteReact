@@ -34,4 +34,47 @@ body
      font-size: 24px;
     font-weight: 500;
 }
+.body{
+    padding: 20px 80px;
+    display: grid;
+    gap: 20px;
+}
 
+.res-card{
+    height: 300px;
+    width: 400px;
+    background: rgb(232, 230, 227);
+
+    padding: 20px;
+}
+
+.res-card img{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 30px
+}
+.res-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cuisine{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.rating{
+    background-color: green;
+    width: 60px;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.res-container{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
