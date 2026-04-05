@@ -9,19 +9,20 @@ import React from 'react'
  * - delivery time
  */
 
-const ResCard = () => {
+const ResCard = ({ data }) => {
   return (
     <div className='res-card'>
-      <img src="/KFC.jpg" alt='res-img'/>
+      <img src={data.image} alt={data.name} />
       <div className='res-info'>
         <div>
-            <h1>Restudent name</h1>
-            <p className='rating'> Rating </p>   
+            <h1>{data.name}</h1>
+            <p className='rating'>⭐ {data.rating}</p>
+            <p>{data.cusines?.join(", ")}</p>
         </div>
 
         <div>
-           <h2>Price/INR</h2>
-           <h4>38 mins</h4>
+           <h2>₹{data.price}</h2>
+           <h4>{data.deliveryTime}</h4>
         </div>
       </div>
     </div>
