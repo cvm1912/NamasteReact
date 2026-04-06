@@ -1,8 +1,10 @@
 import React from 'react'
 import ResCard from './ResCard'
 import { dummyRestaurantList } from '../assets/assets'
+import { useState } from 'react'
 
 const Body = () => {
+  const [dummyRestaurantList ] = useState([1])
   return (
     <div className='body'>
       <div className='search'>
@@ -10,15 +12,9 @@ const Body = () => {
       </div>
 
       <div className='res-container'>
-        <ResCard data={dummyRestaurantList[0]} />
-        <ResCard data={dummyRestaurantList[1]} />
-        <ResCard data={dummyRestaurantList[2]} />
-        <ResCard data={dummyRestaurantList[3]} />
-        <ResCard data={dummyRestaurantList[4]} />
-        <ResCard data={dummyRestaurantList[5]} />
-        <ResCard data={dummyRestaurantList[6]} />
-        <ResCard data={dummyRestaurantList[7]} />
-        <ResCard data={dummyRestaurantList[8]} />
+        {dummyRestaurantList.map((restaurant) => (
+          <ResCard key={restaurant.id} data={restaurant} />
+        ))}
       </div>
     </div>
   )

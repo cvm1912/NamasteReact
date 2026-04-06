@@ -10,6 +10,7 @@ import Tacobells from "./Tacobells.jpg";
 
 export const dummyRestaurantList = [
   {
+    restaruantId:1, 
     name: "KFC",
     cusines: ["Burger", "Biryani", "Beverages"],
     rating: 4.2,
@@ -17,7 +18,9 @@ export const dummyRestaurantList = [
     price: 500,
     image: KFC
   },
+  
   {
+    restaruantId:2,
     name: "Burger King",
     cusines: ["Burger", "Biryani", "Beverages"],
     rating: 4.0,
@@ -26,6 +29,7 @@ export const dummyRestaurantList = [
     image: BurgerKing
   },
   {
+    restaruantId:3,
     name: "McDonald's",
     cusines: ["Burger", "Biryani", "Beverages"],
     rating: 4.5,
@@ -34,6 +38,7 @@ export const dummyRestaurantList = [
     image: McDonals
   },
   {
+    restaruantId:4,
     name: "Domino's Pizza",
     cusines: ["Pizza", "Pasta", "Beverages"],
     rating: 4.3,
@@ -42,6 +47,7 @@ export const dummyRestaurantList = [
     image: Dominols
   },
   {
+    restaruantId:5,
     name: "Subway",
     cusines: ["Sandwich", "Salads", "Beverages"],
     rating: 4.1,
@@ -50,6 +56,7 @@ export const dummyRestaurantList = [
     image: Subways
   },
   {
+    restaruantId:6,
     name: "Starbucks",
     cusines: ["Coffee", "Pastries", "Beverages"],
     rating: 4.4,
@@ -58,6 +65,7 @@ export const dummyRestaurantList = [
     image: Starbucks
   },
   {
+    restaruantId:7,
     name: "Pizza Hut",
     cusines: ["Pizza", "Pasta", "Beverages"],
     rating: 4.0,
@@ -66,6 +74,7 @@ export const dummyRestaurantList = [
     image: Pizzahut
   },
   {
+    restaruantId:8,
     name: "Dunkin' Donuts",
     cusines: ["Donuts", "Coffee", "Beverages"],
     rating: 4.2,
@@ -74,6 +83,7 @@ export const dummyRestaurantList = [
     image: Dunkin
   },
   {
+    restaruantId:9,
     name: "Taco Bell",
     cusines: ["Tacos", "Burritos", "Beverages"],
     rating: 4.1,

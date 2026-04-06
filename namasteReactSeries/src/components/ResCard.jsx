@@ -10,19 +10,20 @@ import React from 'react'
  */
 
 const ResCard = ({ data }) => {
+ const {image, name , rating, price, deliveryTime, cusines} = data
   return (
     <div className='res-card'>
-      <img src={data.image} alt={data.name} />
+      <img src={image} alt={name} />
       <div className='res-info'>
         <div>
-            <h1>{data.name}</h1>
-            <p className='rating'>⭐ {data.rating}</p>
+            <h1>{name}</h1>
+            <p className='rating'>⭐ {rating}</p>
             <p>{data.cusines?.join(", ")}</p>
         </div>
 
         <div>
-           <h2>₹{data.price}</h2>
-           <h4>{data.deliveryTime}</h4>
+           <h2>₹{price}</h2>
+           <h4>{deliveryTime}</h4>
         </div>
       </div>
     </div>
