@@ -4,7 +4,8 @@ import { dummyRestaurantList } from '../assets/assets'
 import { useState } from 'react'
 
 const Body = () => {
-  const [restaurantList, setRestaurantList] = useState(dummyRestaurantList)
+  const arr = useState(dummyRestaurantList)
+  const [restaurantList, setRestaurantList] = arr
   
   return (
     <div className='body'>
