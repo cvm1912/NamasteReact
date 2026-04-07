@@ -16,11 +16,6 @@ const Body = () => {
       )
 
       const json = await data.json()
-      const first = json?.data?.cards
-   
-
-      first.find(c=>c.card.card.gridElements.infoWithStyle.restaurants)
-         console.log(first);
       const restaurants = json?.data?.cards
         ?.find(c => c?.card?.card?.gridElements?.infoWithStyle?.restaurants)
         ?.card?.card?.gridElements?.infoWithStyle?.restaurants
