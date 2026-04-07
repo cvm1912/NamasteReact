@@ -10,7 +10,7 @@ import React from 'react'
  */
 
 const ResCard = ({ data }) => {
- const {image, name , rating, price, deliveryTime, cusines} = data
+  const { image, name, rating, price, deliveryTime, cusines } = data
   return (
     <div className='res-card'>
       <img src={image} alt={name} />
@@ -18,7 +18,7 @@ const ResCard = ({ data }) => {
         <div>
             <h1>{name}</h1>
             <p className='rating'>⭐ {rating}</p>
-            <p>{data.cusines?.join(", ")}</p>
+            <p>{cusines?.join(", ")}</p>
         </div>
 
         <div>
