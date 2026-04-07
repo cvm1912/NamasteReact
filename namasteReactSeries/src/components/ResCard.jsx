@@ -15,16 +15,11 @@ const ResCard = ({ data }) => {
     <div className='res-card'>
       <img src={image} alt={name} />
       <div className='res-info'>
-        <div>
-            <h1>{name}</h1>
-            <p className='rating'>⭐ {rating}</p>
-            <p>{cusines?.join(", ")}</p>
-        </div>
-
-        <div>
-           <h2>₹{price}</h2>
-           <h4>{deliveryTime}</h4>
-        </div>
+        <h1>{name}</h1>
+        <p className='rating'>⭐ {rating}</p>
+        <p>{cusines?.join(", ")}</p>
+        <h2>{price}</h2>
+        <h4>{deliveryTime}</h4>
       </div>
     </div>
   )

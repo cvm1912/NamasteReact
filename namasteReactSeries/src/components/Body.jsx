@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import ResCard from './ResCard'
-import { dummyRestaurantList } from '../assets/assets'
+import Simmer from './Simmer'
+
 
 const Body = () => {
-  const [restaurantList, setRestaurantList] = useState(dummyRestaurantList)
+  const [restaurantList, setRestaurantList] = useState([])
 
   useEffect(() => {
     fetchData()
@@ -35,16 +36,28 @@ const Body = () => {
     }
   }
 
-  return (
+  /**
+   * while data is not getting loaded showing a spinner 
+   */
+
+  /**
+   * latest standard practise
+   */
+
+  
+
+  return  restaurantList.length===0 ?<Simmer/>:(
     <div className='body'>
       <div className='search'>
         Search
       </div>
 
       <div className='res-container'>
+        
+    
         {restaurantList.map((restaurant) => (
           <ResCard key={restaurant.restaruantId} data={restaurant} />
-        ))}
+        ))} 
       </div>
     </div>
   )
