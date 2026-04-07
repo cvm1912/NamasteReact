@@ -135,3 +135,9 @@ body
     0% { background-position: 200% 0; }
     100% { background-position: -200% 0; }
 }
+
+.btn button{
+    padding: 10px 20px;
+    background-color: #48c479;
+    border: none;
+}
