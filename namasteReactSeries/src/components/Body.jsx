@@ -5,6 +5,7 @@ import Simmer from './Simmer'
 
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState([])
+  const [searchText,setSearchText] = useState("");
 
   useEffect(() => {
     fetchData()
@@ -49,7 +50,13 @@ const Body = () => {
   return  restaurantList.length===0 ?<Simmer/>:(
     <div className='body'>
       <div className='search'>
-        Search
+        <input value={searchText} onChange={(e) => setSearchText(e.target.value)} type='text' className='search-box' placeholder='Search for restaurants and food' />
+        <button className='search-btn' onClick={() => {
+          const filterrestaurent = restaurantList.filter((res) =>
+            res.name.toLowerCase().includes(searchText.toLowerCase())
+          );
+          setRestaurantList(filterrestaurent);
+        }}>Search</button>
       </div>
 
       <div className='res-container'>
