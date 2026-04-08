@@ -5,6 +5,7 @@ import Simmer from './Simmer'
 
 const Body = () => {
   const [restaurantList, setRestaurantList] = useState([])
+  const [filterrestaurantList, setFilterRestaurant] = useState([])
   const [searchText,setSearchText] = useState("");
 
   useEffect(() => {
@@ -14,7 +15,7 @@ const Body = () => {
   const fetchData = async () => {
     try {
       const data = await fetch(
-        "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.6139&lng=77.2090&page_type=DESKTOP_WEB_LISTING"
+        "https://corsproxy.io/?https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING3"
       )
 
       const json = await data.json()
@@ -32,6 +33,7 @@ const Body = () => {
         })) || dummyRestaurantList
 
       setRestaurantList(restaurants)
+      setFilterRestaurant(restaurants)
     } catch (error) {
       console.error("Failed to fetch:", error)
     }
@@ -55,14 +57,14 @@ const Body = () => {
           const filterrestaurent = restaurantList.filter((res) =>
             res.name.toLowerCase().includes(searchText.toLowerCase())
           );
-          setRestaurantList(filterrestaurent);
+          setFilterRestaurant(filterrestaurent);
         }}>Search</button>
       </div>
 
       <div className='res-container'>
         
     
-        {restaurantList.map((restaurant) => (
+        {filterrestaurantList.map((restaurant) => (
           <ResCard key={restaurant.restaruantId} data={restaurant} />
         ))} 
       </div>
