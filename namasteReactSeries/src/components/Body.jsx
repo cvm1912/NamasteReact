@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ResCard from './ResCard'
 import Simmer from './Simmer'
+import useOnline from '../utils/useOnline'
 
 
 const Body = () => {
@@ -30,7 +31,7 @@ const Body = () => {
           deliveryTime: info.sla?.slaString || "",
           price: info.costForTwo || "",
           image: `https://media-assets.swiggy.com/swiggy/image/upload/${info.cloudinaryImageId}`
-        })) || dummyRestaurantList
+        })) || []
 
       setRestaurantList(restaurants)
       setFilterRestaurant(restaurants)
@@ -38,6 +39,12 @@ const Body = () => {
       console.error("Failed to fetch:", error)
     }
   }
+
+  const onlineStatus = useOnline();
+  if(onlineStatus===false){
+    return <h1>looks like you are offline, check your internet connection</h1>
+  }
+
 
   /**
    * while data is not getting loaded showing a spinner 
